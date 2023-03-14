@@ -13,12 +13,13 @@ def call() {
   // body.delegate = pipelineParams
   // body()
   pipeline{
+    agent any
     stages {
       stage('Initialize Default Build Parameters'){
-	    steps{
-          sh 'first'
-          sh 'echo working'
-          printAnother()
+        steps{
+            sh 'first'
+            sh 'echo working'
+            printAnother()
         }
       }
     }
