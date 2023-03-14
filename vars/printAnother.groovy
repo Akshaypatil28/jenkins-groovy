@@ -1,4 +1,4 @@
 def call() {
-  sh "working"
+  sh "echo working"
   "without sh"
 }
