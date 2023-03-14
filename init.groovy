@@ -1,4 +1,4 @@
-
+import hudson.model.Result;
 static main(args) {
 	// def body = {}
 	// body.resolveStrategy = Closure.DELEGATE_FIRST
