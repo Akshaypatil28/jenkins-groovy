@@ -42,7 +42,7 @@ def call() {
       stage("test") {
         when {
           expression {
-            'false' == 'true'
+            'true' == 'true'
           }
         }
         // when {
