@@ -17,7 +17,7 @@ def call() {
     stages {
       stage('Initialize Default Build Parameters'){
         steps{
-            sh 'first'
+            // sh 'first'
             sh 'echo working'
             printAnother()
         }
