@@ -10,8 +10,8 @@ def call(body) {
   def pipelineParams= [:]
   // def deployTimeouts
   body.resolveStrategy = Closure.DELEGATE_FIRST;
-  body.delegate = pipelineParams
-  body()
+  // body.delegate = pipelineParams
+  // body()
   pipeline{
     agent any
     stages {
