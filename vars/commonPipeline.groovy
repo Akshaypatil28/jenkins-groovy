@@ -26,13 +26,13 @@ def call() {
       stage('Dependency Check & SonarQube Code Analysis'){
         parallel{
             stage("stage 1"){
-              step{
+              steps{
                 sh 'echo stage 1'
               }
             }
 
              stage("stage 2"){
-              step{
+              steps{
                 sh 'echo stage 2'
               }
             }
