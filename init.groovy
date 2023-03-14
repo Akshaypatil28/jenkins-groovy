@@ -1,12 +1,24 @@
-def call(body) {
+
+static main(args) {
+	// def body = {}
+	// body.resolveStrategy = Closure.DELEGATE_FIRST
+	// body.delegate = [:]
+	call()
+}	
+
+def call() {
   def pipelineParams= [:]
 	def deployTimeouts;
-  stages {
-    stage('Initialize Default Build Parameters'){
+  pipeline{
+
+    stages {
+      stage('Initialize Default Build Parameters'){
 				steps{
-					
-					
-			   	}
+          sh 'first'
+          sh 'echo working'
+          printAnother();
+        }
 			}
+    }
   }
 }
