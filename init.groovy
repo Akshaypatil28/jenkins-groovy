@@ -7,6 +7,11 @@ static main(args) {
 }	
 
 def call(body) {
+  def pipelineParams= [:]
+  def deployTimeouts
+  body.resolveStrategy = Closure.DELEGATE_FIRST;
+  body.delegate = pipelineParams
+  body()
   pipeline{
     stages {
       stage('Initialize Default Build Parameters'){
