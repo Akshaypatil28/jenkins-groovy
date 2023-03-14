@@ -9,7 +9,7 @@ import hudson.model.Result;
 def call(body) {
   def pipelineParams= [:]
   // def deployTimeouts
-  // body.resolveStrategy = Closure.DELEGATE_FIRST;
+  body.resolveStrategy = Closure.DELEGATE_FIRST;
   body.delegate = pipelineParams
   body()
   pipeline{
