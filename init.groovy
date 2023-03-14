@@ -1,24 +1,21 @@
 import hudson.model.Result;
 static main(args) {
-	// def body = {}
-	// body.resolveStrategy = Closure.DELEGATE_FIRST
-	// body.delegate = [:]
-	call()
+	def body = {}
+	body.resolveStrategy = Closure.DELEGATE_FIRST
+	body.delegate = [:]
+	call(body)
 }	
 
-def call() {
-  def pipelineParams= [:]
-	def deployTimeouts;
+def call(body) {
   pipeline{
-
     stages {
       stage('Initialize Default Build Parameters'){
-				steps{
+	steps{
           sh 'first'
           sh 'echo working'
-          printAnother();
+          printAnother()
         }
-			}
+      }
     }
   }
 }
