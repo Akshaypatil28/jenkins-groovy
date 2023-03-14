@@ -18,6 +18,7 @@ def call(body) {
       stage('Build'){
         steps{
             // sh 'first'
+            sh "echo ${pipelineParams.test}"
             sh 'echo working'
             printAnother()
         }
