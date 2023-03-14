@@ -15,11 +15,41 @@ def call() {
   pipeline{
     agent any
     stages {
-      stage('Initialize Default Build Parameters'){
+      stage('Build'){
         steps{
             // sh 'first'
             sh 'echo working'
             printAnother()
+        }
+      }
+
+      stage('Dependency Check & SonarQube Code Analysis'){
+        parallel{
+            stage("stage 1"){
+              sh 'echo stage 1'
+              // printAnother()
+            }
+
+             stage("stage 2"){
+              sh 'echo stage 2'
+              // printAnother()
+            }
+        }
+      }
+
+      stage("test") {
+        when {
+          expression {
+            'false' == 'true'
+          }
+        }
+        // when {
+        //   expression {
+        //     BRANCH_NAME == 'dev' || BRANCH_NAME == 'Master'
+        //   }
+        // }
+        steps {
+          echo "Running testcases"
         }
       }
     }
