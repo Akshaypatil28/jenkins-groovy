@@ -1,10 +1,10 @@
 import hudson.model.Result;
-static main(args) {
-	def body = {}
-	body.resolveStrategy = Closure.DELEGATE_FIRST
-	body.delegate = [:]
-	call(body)
-}	
+// static main(args) {
+// 	def body = {}
+// 	body.resolveStrategy = Closure.DELEGATE_FIRST
+// 	body.delegate = [:]
+// 	call(body)
+// }	
 
 def call(body) {
   def pipelineParams= [:]
